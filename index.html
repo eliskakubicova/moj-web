@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oslava Narodenín</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .main-text {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #333;
+      animation: rotateText 5s infinite alternate;
+    }
+
+    .date-location {
+      font-size: 1.5em;
+      margin-top: 20px;
+      animation: rotateTextX 5s infinite alternate;
+      color: #555;
+    }
+
+    .additional-info {
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: #777;
+      animation: rotateTextY 5s infinite alternate;
+    }
+
+    @keyframes rotateText {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotateTextX {
+      0% {
+        transform: rotateX(0deg);
+      }
+      100% {
+        transform: rotateX(360deg);
+      }
+    }
+
+    @keyframes rotateTextY {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .confirmation {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #900;
+      animation: shake 1s infinite alternate;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(10px);
+      }
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .image-container {
+      margin-top: 20px;
+    }
+
+    .closing {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-text">
+      Milí priatelia, srdečne Vás pozývam na oslavu mojich 17. narodenín.
+    </div>
+    <div class="date-location">
+      Kedy? V sobotu 23.3.2025<br>
+      Kde? V reštaurácii U dobrého priateľa v Bratislave.
+    </div>
+    <div class="additional-info">
+      Čaká Vás skvelá atmosféra, výborné jedlo, hudba a, samozrejme, veľa zábavy.<br>
+      Teším sa na Vás a verím, že spolu oslávime tento výnimočný deň!
+    </div>
+    <div class="confirmation">
+      Prosím potvrďte svoju účasť do 15.3.2025.
+    </div>
+    <div class="image-container">
+      <img src="https://img.freepik.com/premium-photo/cake-with-three-candles-it-number-3-it_919857-983.jpg" alt="Narodeninová torta" width="300">
+    </div>
+    <div class="closing">
+      S radosťou Vás očakáva, Eliška.
+    </div>
+    <button class="button" onclick="confirmAttendance()">Potvrdiť účasť</button>
+  </div>
+
+  <script>
+    function confirmAttendance() {
+      alert("Ďakujeme za potvrdenie účasti!");
+    }
+  </script>
+</body>
+</html>
